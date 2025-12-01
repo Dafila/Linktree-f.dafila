@@ -180,22 +180,211 @@ ul.sosmed li:not(:last-child) {
     margin-top: 1rem;
 }
 
-/* Responsif */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px;
-    }
+/* Media Queries untuk Responsivitas */
 
+/* Tablet Landscape */
+@media screen and (max-width: 1200px) {
+    body {
+        max-width: 90%;
+        padding: 3rem 2rem;
+    }
+    
+    .bg-text-animation {
+        font-size: 8rem;
+        top: 8rem;
+    }
+}
+
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 95%;
+        padding: 2rem 1.5rem;
+    }
+    
+    .bg-text-animation {
+        font-size: 6rem;
+        top: 6rem;
+        -webkit-text-stroke: 3px #B87C4C;
+    }
+    
     .profile-img {
         width: 100px;
         height: 100px;
     }
-
+    
     .name {
         font-size: 24px;
     }
+    
+    .teks-berjalan {
+        font-size: 18px;
+    }
+    
+    .bio {
+        font-size: 14px;
+    }
+    
+    ul {
+        max-width: 100%;
+    }
+    
+    .link-card {
+        padding: 0.8rem;
+        border-radius: 20px;
+    }
+}
 
-    .link-item {
-        padding: 12px 15px;
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+    
+    .bg-text-animation {
+        font-size: 4rem;
+        top: 4rem;
+        -webkit-text-stroke: 2px #B87C4C;
+    }
+    
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        border-width: 3px;
+    }
+    
+    .name {
+        font-size: 20px;
+    }
+    
+    .teks-berjalan {
+        font-size: 16px;
+        min-height: 24px;
+    }
+    
+    .bio {
+        font-size: 13px;
+        padding: 0 0.5rem;
+    }
+    
+    .link-card {
+        padding: 0.7rem;
+        border-radius: 15px;
+        box-shadow: 3px 3px 0 #C4A484;
+    }
+    
+    .sosmed .link-icon {
+        padding: 0.4rem;
+        border-radius: 8px;
+    }
+    
+    .link-text {
+        font-size: 14px;
+    }
+    
+    .toast {
+        bottom: 10px;
+        padding: 10px 12px;
+        font-size: 14px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .copyright {
+        font-size: 12px;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile Small (Very small screens) */
+@media screen and (max-width: 320px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .bg-text-animation {
+        font-size: 3rem;
+        top: 3rem;
+    }
+    
+    .profile-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .name {
+        font-size: 18px;
+    }
+    
+    .teks-berjalan {
+        font-size: 14px;
+    }
+    
+    .bio {
+        font-size: 12px;
+    }
+    
+    .link-card {
+        padding: 0.6rem;
+    }
+    
+    .link-text {
+        font-size: 13px;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding: 1rem;
+    }
+    
+    .header {
+        margin-bottom: 15px;
+    }
+    
+    .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .bg-text-animation {
+        display: none; /* Sembunyikan animasi teks di landscape untuk menghemat space */
+    }
+    
+    ul.sosmed li:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* High-resolution displays */
+@media screen and (min-width: 1400px) {
+    body {
+        max-width: 600px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #F7F1DE;
+        --bg-color: #2d3a2d;
+        --card-bg: #5c432e;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .teks-berjalan .kursor {
+        animation: none;
     }
 }
